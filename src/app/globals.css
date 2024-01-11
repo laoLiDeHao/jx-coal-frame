@@ -17,6 +17,8 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +26,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+	/*设置cesium和three的画布位置*/
+  .container-integrate canvas {
+    position: absolute;
+    top: 0;
+}
+/*three画布禁止鼠标操作*/
+.container-integrate canvas:nth-child(3) {
+    pointer-events: none;
+
 }
